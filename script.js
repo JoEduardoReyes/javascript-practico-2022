@@ -1,24 +1,11 @@
-// h1 { color : blue}
+const h1 = document.querySelector("h1");
+const input1 = document.querySelector("#calculo1");
+const input2 = document.querySelector("#calculo2");
+const btn = document.querySelector("#calculoboton");
+const pResult = document.querySelector(".result");
 
-const title = document.querySelector('h1');
-const p = document.querySelector('p');
-const parrafito = document.querySelector('.parrafo');
-const parrafoConId = document.querySelector('#pid');
-const input = document.querySelector('input');
-
-console.log(title.outerHTML);
-
-console.log({title, p, parrafito, input});
-
-console.log(title.getAttribute('class'));
-title.setAttribute('class', 'title');
-
-title.classList.add('title');
-title.classList.remove('Titulo');
-
-input.value = "456"
-
-const img = document.createElement('img');
-img.setAttribute('src', 'https://static.platzi.com/media/logotipo-platzi.png');
-
-parrafoConId.append(img);
+function btnOnClick() {
+	const resultadoSumaInputs =
+		parseFloat(input1.value) + parseFloat(input2.value);
+	pResult.innerText = "Resultado: " + resultadoSumaInputs;
+}
